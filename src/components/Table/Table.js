@@ -1,131 +1,303 @@
 import React, { Component } from "react";
 import "../../App/App.css";
-import "./Crm.css"
-import logo from "../../assets/images/Logo.png";
-import { Button, Layout, Menu,Dropdown } from "antd";
-import { Tabs, Radio, Space } from 'antd';
+import "../Crm/Crm.css"
+import "./Table.css"
+import HeaderLayout from "../Header/Header"
+import Profile from "../Profile/Profile"
+import Modify from "../Modify/Modify";
+import Adduser from "../Adduser/Adduser";
+import MenuLayout from "../Menu/MenuLayout"
+import { Button, Layout, Menu, Upload } from "antd";
+import { Tabs } from 'antd';
+import { Table, Space, Tag, Avatar } from 'antd';
+import { Input, Select } from 'antd';
+import { Popconfirm, message } from 'antd';
+import { UploadOutlined } from '@ant-design/icons';
+const { Search } = Input;
+
+const { Option } = Select;
 const { TabPane } = Tabs;
 import {
-  DesktopOutlined,
-  PieChartOutlined,
-  FileOutlined,
-  TeamOutlined,
-  UserOutlined,
-  MenuUnfoldOutlined,
-  MenuFoldOutlined,
-  SettingOutlined,
-  LogoutOutlined,
-  RollbackOutlined
+  PlusOutlined
 } from "@ant-design/icons";
 const { Header, Sider, Content, Footer } = Layout;
 const { SubMenu } = Menu;
-export default class Table extends React.Component {
+export default class TableUser extends React.Component {
   state = {
     collapsed: false,
+    visible: false,
+    visibleModify: false,
+    visibleAdduser: false
   };
-  toggle = () => {
+  onSearch = value => console.log(value);
+  collapsed = () => {
     this.setState({
       collapsed: !this.state.collapsed,
     });
   };
+  showDrawer = () => {
+    this.setState({
+      visible: true,
+    });
+  };
+
+  onClose = () => {
+    this.setState({
+      visible: false,
+    });
+  };
+  showDrawerModify = () => {
+    this.setState({
+      visibleModify: true,
+    });
+  };
+
+  onCloseModify = () => {
+    this.setState({
+      visibleModify: false,
+    });
+  };
+  showDrawerAdduser = () => {
+    this.setState({
+      visibleAdduser: true,
+    });
+  };
+
+  onCloseAdduser = () => {
+    this.setState({
+      visibleAdduser: false,
+    });
+  };
+  confirm = (e) => {
+    console.log(e);
+    message.success('Click on Yes');
+  }
+
+  cancel = (e) => {
+    console.log(e);
+    message.error('Click on No');
+  }
   render() {
-    
-    const menu = (
-      <Menu>
-        <Menu.Item icon={<SettingOutlined />}>
-          <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/">
-            Cập nhật profile
-          </a>
-        </Menu.Item>
-        <Menu.Item icon={<RollbackOutlined />}>
-          <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/">
-            Đổi mật khẩu
-          </a>
-        </Menu.Item>
-        <Menu.Item icon={<LogoutOutlined />}>
-          <a target="_blank" rel="noopener noreferrer" href="http://www.tmall.com/">
-            Đăng xuất
-          </a>
-        </Menu.Item>
-      </Menu>
-    );
+    const data = [
+      {
+        key: '1',
+        name: 'Nguyễn Văn A',
+        age: "32",
+        address: 'New York Park',
+      },
+      {
+        key: '2',
+        name: 'Jim Green',
+        age: 40,
+        address: 'London Park',
+      },
+      {
+        key: '3',
+        name: 'John Brown',
+        age: 32,
+        address: 'New York Park',
+      },
+      {
+        key: '4',
+        name: 'Jim Green',
+        age: 40,
+        address: 'London Park',
+      },
+      {
+        key: '5',
+        name: 'John Brown',
+        age: 32,
+        address: 'New York Park',
+      },
+      {
+        key: '6',
+        name: 'Jim Green',
+        age: 40,
+        address: 'London Park',
+      },
+      {
+        key: '7',
+        name: 'Jim Green',
+        age: 40,
+        address: 'London Park',
+      },
+      {
+        key: '8',
+        name: 'Jim Green',
+        age: 40,
+        address: 'London Park',
+      },
+      {
+        key: '9',
+        name: 'Jim Green',
+        age: 40,
+        address: 'London Park',
+      },
+      {
+        key: '10',
+        name: 'Jim Green',
+        age: 40,
+        address: 'London Park',
+      },
+      {
+        key: '11',
+        name: 'Jim Green',
+        age: 40,
+        address: 'London Park',
+      },
+      {
+        key: '12',
+        name: 'Jim Green',
+        age: 40,
+        address: 'London Park',
+      },
+      {
+        key: '13',
+        name: 'Jim Green',
+        age: 40,
+        address: 'London Park',
+      },
+      {
+        key: '14',
+        name: 'Jim Green',
+        age: 40,
+        address: 'London Park',
+      },
+      {
+        key: '15',
+        name: 'John Brown',
+        age: 32,
+        address: 'New York Park',
+      },
+      {
+        key: '16',
+        name: 'Jim Green',
+        age: 40,
+        address: 'London Park',
+      },
+      {
+        key: '17',
+        name: 'Jim Green',
+        age: 40,
+        address: 'London Park',
+      },
+      {
+        key: '18',
+        name: 'Jim Green',
+        age: 40,
+        address: 'London Park',
+      },
+      {
+        key: '19',
+        name: 'Jim Green',
+        age: 40,
+        address: 'London Park',
+      },
+      {
+        key: '20',
+        name: 'Jim Green',
+        age: 40,
+        address: 'London Park',
+      },
+      {
+        key: '21',
+        name: 'Jim Green',
+        age: 40,
+        address: 'London Park',
+      },
+      {
+        key: '22',
+        name: 'Jim Green',
+        age: 40,
+        address: 'London Park',
+      },
+      {
+        key: '23',
+        name: 'Jim Green',
+        age: 40,
+        address: 'London Park',
+      },
+    ];
+    const columns = [
+      {
+        title: 'Họ và tên',
+        width: 200,
+        dataIndex: 'name',
+        key: 'name',
+        fixed: 'left',
+        sorter: (a, b) => a.name.length - b.name.length,
+        render: (text) => (
+
+          <div>
+            <Avatar style={{ marginRight: "3px" }} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+            <a onClick={this.showDrawer}>{text}</a>
+          </div>
+        )
+      },
+      {
+        title: 'Bút danh',
+        width: 100,
+        dataIndex: 'age',
+        key: 'age',
+        fixed: 'left',
+        sorter: (a, b) => a.age - b.age,
+      },
+      { title: 'Năm sinh', dataIndex: 'address', key: '1' },
+      { title: 'Giới tính', dataIndex: 'address', key: '2' },
+      { title: 'Nơi sinh', dataIndex: 'address', key: '4' },
+      { title: 'Quê quán', dataIndex: 'address', key: '5' },
+      { title: 'Dân tộc', dataIndex: 'address', key: '6' },
+      { title: 'Tôn giáo', dataIndex: 'address', key: '7' },
+      { title: 'Bộ phận công tác', dataIndex: 'address', key: '8' },
+      { title: 'Chức vụ', dataIndex: 'address', key: '9' },
+      { title: 'Ngày bổ nhiệm', dataIndex: 'address', key: '10' },
+      {
+        title: 'Hành động',
+        key: 'operation',
+        fixed: 'right',
+        width: 180,
+        render: () => (
+          <Space size="middle" >
+            {/* <Avatar>U</Avatar> */}
+            <Popconfirm title="Are you sure delete this task?" onConfirm={this.confirm} onCancel={this.cancel} okText="Yes" cancelText="No">
+              <Tag color="volcano" className="table-action">Xoá</Tag>
+            </Popconfirm>
+            <Tag onClick={this.showDrawerModify} color="geekblue" className="table-action">Sửa thông tin</Tag>
+          </Space>
+        ),
+      },
+    ];
     return (
       <div>
-        <Layout>
-          <Sider collapsed={this.state.collapsed}>
-            <div className="logo">
-              <img
-                className="logo-img"
-                style={{ objectFit: "cover" }}
-                src={logo}
-              ></img>
-            </div>
-            <Menu mode="inline" defaultSelectedKeys={["4"]}>
-              <SubMenu key="sub1" icon={<UserOutlined />} title="User">
-                <Menu.Item key="3">Tom</Menu.Item>
-                <Menu.Item key="4">Bill</Menu.Item>
-                <Menu.Item key="5">Alex</Menu.Item>
-              </SubMenu>
-              <SubMenu key="sub2" icon={<TeamOutlined />} title="Team">
-                <Menu.Item key="6">Team 1</Menu.Item>
-                <Menu.Item key="8">Team 233</Menu.Item>
-              </SubMenu>
-              <Menu.Item key="1" icon={<PieChartOutlined />}>
-                Option 1
-              </Menu.Item>
-              <Menu.Item key="2" icon={<DesktopOutlined />}>
-                Option 2
-              </Menu.Item>
-              <Menu.Item key="9" icon={<FileOutlined />}>
-                Option 3
-              </Menu.Item>
-            </Menu>
-          </Sider>
-          <Layout>
-            <Header className="site-layout-background">
-              {React.createElement(
-                this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
-                {
-                  className: "trigger",
-                  onClick: this.toggle,
-                }
-              )}
-              <Dropdown overlay={menu}>
-                <a
-                  className="ant-dropdown-link"
-                  onClick={(e) => e.preventDefault()}
-                >
-                  Xin chào:Admin 
-                  {/* <DownOutlined /> */}
-                </a>
-              </Dropdown>
-            </Header>
-            <Content style={{ margin: "24px 16px 0" }}>
-              <div
-                className="site-layout-background"
-                style={{ padding: 24, minHeight: 100 }}
-              >
-               <Tabs >
-          <TabPane tab="Thông tin chung" key="1">
-            Content of Tab 1
-          </TabPane>
-          <TabPane tab="Quá trình công tác" key="2">
-            Content of Tab 2
-          </TabPane>
-          <TabPane tab="Trình độ" key="3">
-            Content of Tab 3
-          </TabPane>
-          <TabPane tab="Thông tin thêm" key="4">
-            Content of Tab 3
-          </TabPane>
-        </Tabs>
+        <Content >
+          <div style={{ height: "calc(100vh - 139px)" }} className="layout-content">
+            <div className="table-btn-control">
+              <div>
+                <Button type="dashed" className="table-btn-add" icon={<PlusOutlined />} onClick={this.showDrawerAdduser} >
+                  Thêm nhân viên
+                </Button>
+                <Upload >
+                  <Button icon={<UploadOutlined />}>Upload bằng file excel</Button>
+                </Upload>
               </div>
-            </Content>
-            <Footer style={{ textAlign: "center" }}>
-              Ant Design ©2018 Created by Ant UED
-            </Footer>
-          </Layout>
-        </Layout>
+              <Search
+                placeholder="input search text"
+                allowClear
+                onSearch={this.onSearch}
+                style={{ width: 200 }}
+                className="table-btn-search"
+              />
+            </div>
+            <div
+              style={{ padding: 24, minHeight: 200 }}
+            >
+              <Table columns={columns} dataSource={data} scroll={{ x: 2300 }} className="table-content" />
+            </div>
+          </div>
+        </Content>
+        <Profile visible={this.state.visible} onCloseProfile={this.onClose} />
+        <Modify visibleModify={this.state.visibleModify} onCloseModify={this.onCloseModify} />
+        <Adduser visibleAdduser={this.state.visibleAdduser} onCloseAdduser={this.onCloseAdduser} />
       </div>
     );
   }

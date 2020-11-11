@@ -2,4 +2,11 @@
     display: flex;;
     justify-content: space-between;
     align-items: center;
+    
+}
+.site-layout-background{
+    background: #855979;
+    background: linear-gradient(to right,#ad5389 0,#ad5389 36%,#28343b 100%);
+    
+
 }

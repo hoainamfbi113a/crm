@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Spin } from 'antd';
 import {
   FacebookOutlined,
   GooglePlusOutlined,
@@ -12,6 +13,7 @@ export default class Login extends Component {
     this.state = {
       userLogin: "",
       userPass: "",
+      ishow:false
     };
   }
   onChange = (e) => {
@@ -23,7 +25,11 @@ export default class Login extends Component {
     e.preventDefault();
     if (this.state.userLogin === "admin" && this.state.userPass === "admin") {
       localStorage.setItem("usertoken", "NguyeenxHoaifNam");
-      this.props.history.push('/crm')
+      this.setState({ ishow: !this.state.ishow});
+      setTimeout(()=>{
+        this.props.history.push('/crm')
+        this.setState({ ishow: !this.state.ishow});
+      },600);
     }
     else{
       alert("tai khoan hoac mat khau khong dung")
@@ -31,7 +37,13 @@ export default class Login extends Component {
   };
   render() {
     return (
+      <div>
+        <div className="example">
+          {this.state.ishow == true ? <Spin /> : ""}
+          
+         </div>
       <div className="l-form">
+        
         <div className="shape1" />
         <div className="shape2" />
         <div className="floating floatFoot" />
@@ -85,6 +97,7 @@ export default class Login extends Component {
             </div>
           </form>
         </div>
+      </div>
       </div>
     );
   }

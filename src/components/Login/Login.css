@@ -190,7 +190,7 @@ img{
 }
 .form__input:focus, .form__button[type="submit"]:hover {
     box-shadow: 5px 5px rgba(0,0,255,.5);
-    padding: 10px;
+    /* padding: 10px; */
   }
 /*===== MEDIA QUERIS =====*/
 @media screen and (min-width: 968px){
@@ -245,6 +245,11 @@ img{
     left: -100px;
     z-index: 0;
 }
+.example {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+  }
 @keyframes floating {
     0% {
         transform: translate(0,0px);

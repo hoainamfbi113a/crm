@@ -1,0 +1,26 @@
+.ant-dropdown-link{
+    color: #fff;
+}
+.example{
+    z-index: 2;
+}
+.site-layout-background{
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.header-bell{
+
+}
+.header-notification{
+    font-size: 26px;
+    color: #fff;
+}
+.header-user{
+    margin-left: 22px;
+
+}
+.header-right{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}

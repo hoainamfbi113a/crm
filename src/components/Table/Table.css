@@ -1,0 +1,35 @@
+.table-btn-add{
+    margin: 20px;
+    margin-bottom: 0px;
+}
+.table-btn-search{
+    margin: 20px;
+    margin-bottom: 0px;
+}
+.table-btn-control{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.table-action{
+    cursor: pointer;
+}
+.ant-layout{
+    background: #fff;
+    z-index: 2;
+}
+.table-content{
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.layout-content{
+    /* margin-top: -51px; */
+}
+.layout-footer{
+    /* margin-top: 10px; */
+    background: #fff;
+    z-index: -1;
+}
+/* .ant-table-row-level-0:hover{
+    background-color: crimson;
+} */
