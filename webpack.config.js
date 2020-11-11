@@ -12,7 +12,8 @@ module.exports = (env, agrv) => {
         entry: ['./src/index.js'],
         output: {
             filename: '[name].[contenthash].js',
-            path: path.resolve(__dirname, 'dist')
+            path: path.resolve(__dirname, 'dist'),
+            publicPath: '/'
         },
         plugins: [
             new CleanWebpackPlugin(),
@@ -78,7 +79,6 @@ module.exports = (env, agrv) => {
             stats: 'minimal',
             inline: true,
             compress: true,
-            contentBase: '/'
         },
     }
 };

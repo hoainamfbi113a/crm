@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import ProfileOne from "../Profile/Profile"
+import ProfileOne from "../Profile/ProfileOne"
 import Table from "../Table/Table"
 export default class RouterUrl extends Component {
     render() {
