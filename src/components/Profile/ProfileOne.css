@@ -1,0 +1,20 @@
+.profile-content{
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 24px;
+}
+.profile-content-main{
+    padding:24px
+}
+.profile-infor-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.profile-infor-user-title-left{
+    width: 77px;
+    color: #008784;
+    display: inline-block;
+}

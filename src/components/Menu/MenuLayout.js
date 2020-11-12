@@ -20,22 +20,27 @@ export default class MenuLayout extends Component {
             ></img>
           </div>
           <Menu mode="inline" defaultSelectedKeys={["4"]} className="menulayout-main" >
-            <Menu.Item key="sub1" icon={<UserOutlined />}>
+            <Menu.Item key="1" icon={<UserOutlined />}>
               <Link to="/crm/profileone">
                  Cá nhân
               </Link>
             </Menu.Item>
-            <SubMenu key="sub2" icon={<TeamOutlined />} title="Nhân viên">
+            <Menu.Item key="2" icon={<TeamOutlined />}>
+              <Link to="/crm">
+                 Nhân viên
+              </Link>
+            </Menu.Item>
+            {/* <SubMenu key="sub2" icon={<TeamOutlined />} title="Nhân viên">
               <Menu.Item key="6">Tạo nhân viên mới</Menu.Item>
               <Menu.Item key="8">Chỉnh sửa theo yêu cầu</Menu.Item>
-            </SubMenu>
-            <Menu.Item key="1" icon={<PieChartOutlined />}>
+            </SubMenu> */}
+            <Menu.Item key="3" icon={<PieChartOutlined />}>
               Option 1
             </Menu.Item>
-            <Menu.Item key="2" icon={<DesktopOutlined />}>
+            <Menu.Item key="4" icon={<DesktopOutlined />}>
               Option 2
             </Menu.Item>
-            <Menu.Item key="9" icon={<FileOutlined />}>
+            <Menu.Item key="5" icon={<FileOutlined />}>
               Option 3
             </Menu.Item>
           </Menu>
