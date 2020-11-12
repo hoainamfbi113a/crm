@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {Link}  from 'react-router-dom'
-import logo from "../../assets/images/Logo.png";
+import logo from "../../assets/images/logo.png";
 import { Menu,Layout } from "antd"
 import { UserOutlined,PieChartOutlined,TeamOutlined,DesktopOutlined,FileOutlined } from '@ant-design/icons';
 
