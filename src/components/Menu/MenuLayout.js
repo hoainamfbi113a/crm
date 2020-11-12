@@ -19,7 +19,7 @@ export default class MenuLayout extends Component {
               src={logo}
             ></img>
           </div>
-          <Menu mode="inline" defaultSelectedKeys={["4"]} className="menulayout-main" >
+          <Menu mode="inline" defaultSelectedKeys={["2"]} className="menulayout-main" >
             <Menu.Item key="1" icon={<UserOutlined />}>
               <Link to="/crm/profileone">
                  Cá nhân
