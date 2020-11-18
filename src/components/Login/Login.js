@@ -39,11 +39,16 @@ export default class Login extends Component {
     return (
       <div>
         <div className="example">
-          {this.state.ishow == true ? <Spin /> : ""}
-          
+          {this.state.ishow === true ? <Spin /> : ""}
          </div>
       <div className="l-form">
-        
+        <div id="bubbles">
+          <div className="bubble x1"></div>
+          <div className="bubble x2"></div>
+          <div className="bubble x3"></div>
+          <div className="bubble x4"></div>
+          <div className="bubble x5"></div>
+        </div>
         <div className="shape1" />
         <div className="shape2" />
         <div className="floating floatFoot" />

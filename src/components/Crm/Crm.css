@@ -5,8 +5,8 @@
     
 }
 .site-layout-background{
-    background: #855979;
-    background: linear-gradient(to right,#ad5389 0,#ad5389 36%,#28343b 100%);
-    
+    /* background: #855979; */
+    /* background: linear-gradient(to right,#ad5389 0,#ad5389 36%,#28343b 100%); */
+   background-color: #3699ff; 
 
 }

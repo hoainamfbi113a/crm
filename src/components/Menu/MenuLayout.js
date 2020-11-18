@@ -30,10 +30,6 @@ export default class MenuLayout extends Component {
                  Nhân viên
               </Link>
             </Menu.Item>
-            {/* <SubMenu key="sub2" icon={<TeamOutlined />} title="Nhân viên">
-              <Menu.Item key="6">Tạo nhân viên mới</Menu.Item>
-              <Menu.Item key="8">Chỉnh sửa theo yêu cầu</Menu.Item>
-            </SubMenu> */}
             <Menu.Item key="3" icon={<PieChartOutlined />}>
               Option 1
             </Menu.Item>
